@@ -7,32 +7,88 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie{
+  background-color: #A47551;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+  width: 300px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* background-color: #3d2b1f; */
+}
+
+.movie img{
+  max-width: 100%;
+}
+
+.movie-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.movie-info h3{
+  margin: 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-info span{
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.movie-over{
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(102%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie:hover .movie-over{
+  transform: translateY(0%);
+}
+
+.tag {
+  background-color: brown;
+  border-radius: 5px;
+  padding:  0.5rem;
+}
+
+.tag-green{
+  color: green;
+}
+
+.tag-orange{
+  color: orangered;
+}
+
+.tag-red{
+  color: red;
+}
+
+.mapp{
+  font-size: 40px;
+  color: firebrick;
+  font-weight: 1000;
+}
+
+@media only screen and (min-width: 600px){
+  .mapp{
+    font-size: 35px;
   }
-  to {
-    transform: rotate(360deg);
+  .movie{
+    width: 280px;
   }
 }
+
+
